@@ -31,12 +31,12 @@
       <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 class="text-xl">Send a Message</h2>
         <p class="mt-2 text-sm text-slate-500">
-          Replace the Formspree action URL with your form endpoint.
+          Fill out the form below and I'll get back to you as soon as possible.
         </p>
         <form
           class="mt-4 space-y-4"
           method="POST"
-          action="https://formspree.io/f/your-form-id"
+          action="https://formspree.io/f/xwvneobe"
         >
           <div>
             <label class="text-sm font-medium text-slate-600" for="name">Name</label>
