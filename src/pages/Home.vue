@@ -4,6 +4,8 @@ import projectsData from '../content/projects.json'
 import type { Project } from '../types/project'
 import ProjectCard from '../components/ProjectCard.vue'
 
+const resumeUrl = new URL('../assets/resume/resume.pdf', import.meta.url).href
+
 const projects = projectsData as Project[]
 
 const featuredProjects = computed(() => {
@@ -21,8 +23,6 @@ const techStack = [
   'LangChain',
 ]
 
-console.log(import.meta.env);
-const resumeUrl = new URL('/assets/resume/resume.pdf', import.meta.env.VITE_BASE_URL).toString()
 </script>
 
 <template>

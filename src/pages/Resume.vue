@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
-const resumeDocUrl = new URL('/assets/resume/resume.docx', import.meta.env.BASE_URL).toString()
-const resumePdfUrl = new URL('/assets/resume/resume.pdf', import.meta.env.BASE_URL).toString()
+const resumeDocUrl = new URL('../assets/resume/resume.docx', import.meta.url).href
+const resumePdfUrl = new URL('../assets/resume/resume.pdf', import.meta.url).href
 
 const hasPdf = ref(false)
 const checked = ref(false)
@@ -40,7 +40,7 @@ onMounted(async () => {
         />
       </div>
       <p v-else class="text-sm text-slate-500">
-        PDF preview not found. Add `public/assets/resume/resume.pdf` to enable the embedded preview.
+        PDF preview not found. Ensure `src/assets/resume/resume.pdf` exists to enable the embedded preview.
       </p>
     </section>
   </div>
