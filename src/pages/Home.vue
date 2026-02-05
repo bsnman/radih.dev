@@ -15,8 +15,12 @@ const featuredProjects = computed(() => {
 
 const techStack = [
   'Vue 3',
+  'React',
+  'Nuxt.js',
   'TypeScript',
+  'Django',
   'FastAPI',
+  'Python',
   'PostgreSQL',
   'Docker',
   'AWS',

@@ -2,10 +2,10 @@
   {
     "id": "incentives-platform",
     "title": "Incentives Intelligence Platform",
-    "description": "AI-powered platform for discovering and deduplicating incentive programs with search and analytics.",
+    "description": "AI-powered platform for discovering and matching incentive programs to businesses.",
     "tags": ["AI", "FastAPI", "PostgreSQL", "Vue"],
-    "repo": "https://github.com/your-handle/incentives-platform",
-    "demo": "https://demo.example.com",
+    "repo": null,
+    "demo": null,
     "featured": true
   },
   {
@@ -13,17 +13,17 @@
     "title": "SaaS Starter Kit",
     "description": "Multi-tenant API framework with authentication, billing, and integrations.",
     "tags": ["Django", "React", "Stripe"],
-    "repo": "https://github.com/your-handle/saas-starter",
-    "demo": "",
+    "repo": null,
+    "demo": null,
     "featured": true
   },
   {
     "id": "insurance-automation",
     "title": "Insurance Automation Suite",
-    "description": "B2B workflow automation for insurance underwriting and document processing.",
+    "description": "B2B workflow automation for insurance processes, workflow, and reporting.",
     "tags": ["Vue", "Django", "Docker"],
-    "repo": "https://github.com/your-handle/insurance-automation",
-    "demo": "",
+    "repo": null,
+    "demo": null,
     "featured": true
   },
   {
@@ -31,8 +31,8 @@
     "title": "VR Audio Toolkit",
     "description": "Desktop app for node-based sound effect processing across multi-channel outputs.",
     "tags": ["Electron", "React", "Node.js"],
-    "repo": "https://github.com/your-handle/vr-audio-toolkit",
-    "demo": "",
+    "repo": null,
+    "demo": null,
     "featured": false
   },
   {
@@ -40,8 +40,8 @@
     "title": "Sharpen Health PWA",
     "description": "Progressive web app with health tracking, reminders, and offline support.",
     "tags": ["PWA", "Vue", "Firebase"],
-    "repo": "https://github.com/your-handle/sharpen-pwa",
-    "demo": "",
+    "repo": null,
+    "demo": null,
     "featured": false
   }
 ]
