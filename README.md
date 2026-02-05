@@ -1,35 +1,44 @@
-# Portfolio (Vue 3 + Vite + TypeScript)
+# radih.dev portfolio
 
-A clean, static portfolio starter built with Vue 3 (Composition API), Vite, TypeScript, and Tailwind CSS.
+Static portfolio site built with Vue 3 (Composition API), TypeScript, Vite, and Tailwind CSS. Content is a mix of Markdown and JSON, and routing is handled by Vue Router. Vite is provided via `rolldown-vite` (see `package.json` overrides).
 
-## Getting Started
+## Tech stack
+
+- Vue 3 + Vue Router
+- TypeScript + `vue-tsc` type checking
+- Vite (via `rolldown-vite`) + PostCSS + Tailwind CSS
+- Markdown rendering via `markdown-it`
+
+## Commands
 
 ```bash
 npm install
 npm run dev
-```
-
-Build for production:
-
-```bash
 npm run build
+npm run preview
 ```
 
-## Editing Content
+## Project structure
 
-- **Work experience:** `src/content/work-experience.md`
-- **Projects:** `src/content/projects.json`
-- **Hero and tech stack:** `src/pages/Home.vue`
-- **Contact links + email:** `src/components/Footer.vue` and `src/pages/Contact.vue`
+- `src/pages/` route-level pages (Home, Projects, Experience, Resume, Contact)
+- `src/components/` shared UI components
+- `src/content/` Markdown + JSON content
+- `public/assets/` static assets served as-is
 
-## Resume Files
+## Content sources
 
-Place resume files in `public/assets/resume/`:
+- Work experience: `src/content/work-experience.md`
+- Projects: `src/content/projects.json`
+- Hero + tech stack: `src/pages/Home.vue`
+- Contact links + email: `src/components/Footer.vue`, `src/pages/Contact.vue`
 
-- `public/assets/resume/resume.docx` (download button)
-- `public/assets/resume/resume.pdf` (optional iframe preview)
+## Resume handling
 
-The Resume page automatically checks for `resume.pdf` and hides the preview if it is missing.
+Place files under `public/assets/resume/`:
+
+- `public/assets/resume/resume.pdf`
+
+The Resume page checks for `resume.pdf` and hides the preview if missing.
 
 ## Routes
 
@@ -39,6 +48,6 @@ The Resume page automatically checks for `resume.pdf` and hides the preview if i
 - `/resume` Resume
 - `/contact` Contact
 
-## Deployment (Vercel)
+## Deployment
 
-SPA rewrites are configured in `vercel.json` so direct page refreshes work correctly.
+Vercel SPA rewrites are configured in `vercel.json` to support direct deep-link refreshes.
