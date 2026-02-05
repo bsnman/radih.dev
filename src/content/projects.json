@@ -1,0 +1,47 @@
+[
+  {
+    "id": "incentives-platform",
+    "title": "Incentives Intelligence Platform",
+    "description": "AI-powered platform for discovering and deduplicating incentive programs with search and analytics.",
+    "tags": ["AI", "FastAPI", "PostgreSQL", "Vue"],
+    "repo": "https://github.com/your-handle/incentives-platform",
+    "demo": "https://demo.example.com",
+    "featured": true
+  },
+  {
+    "id": "saas-starter",
+    "title": "SaaS Starter Kit",
+    "description": "Multi-tenant API framework with authentication, billing, and integrations.",
+    "tags": ["Django", "React", "Stripe"],
+    "repo": "https://github.com/your-handle/saas-starter",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": "insurance-automation",
+    "title": "Insurance Automation Suite",
+    "description": "B2B workflow automation for insurance underwriting and document processing.",
+    "tags": ["Vue", "Django", "Docker"],
+    "repo": "https://github.com/your-handle/insurance-automation",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": "audio-desktop",
+    "title": "VR Audio Toolkit",
+    "description": "Desktop app for node-based sound effect processing across multi-channel outputs.",
+    "tags": ["Electron", "React", "Node.js"],
+    "repo": "https://github.com/your-handle/vr-audio-toolkit",
+    "demo": "",
+    "featured": false
+  },
+  {
+    "id": "health-pwa",
+    "title": "Sharpen Health PWA",
+    "description": "Progressive web app with health tracking, reminders, and offline support.",
+    "tags": ["PWA", "Vue", "Firebase"],
+    "repo": "https://github.com/your-handle/sharpen-pwa",
+    "demo": "",
+    "featured": false
+  }
+]
