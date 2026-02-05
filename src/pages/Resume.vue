@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
-const resumeDocUrl = new URL('../assets/resume/resume.docx', import.meta.url).href
 const resumePdfUrl = new URL('../assets/resume/resume.pdf', import.meta.url).href
 
 const hasPdf = ref(false)
@@ -27,7 +26,7 @@ onMounted(async () => {
         Download the latest resume or preview the PDF version when available.
       </p>
       <div class="mt-6">
-        <a class="button-primary" :href="resumeDocUrl" download>Download Resume</a>
+        <a class="button-primary" :href="resumePdfUrl" download>Download Resume</a>
       </div>
     </section>
 
