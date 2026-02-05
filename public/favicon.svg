@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="R favicon">
+  <!-- background -->
+  <rect width="256" height="256" rx="40" fill="#000"/>
+
+  <!-- monoline R -->
+  <path
+    d="M92 60 V196
+       M92 60 H150
+       Q180 60 180 96
+       Q180 132 150 132
+       H92
+       M130 132 L190 196"
+    fill="none"
+    stroke="#fff"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
