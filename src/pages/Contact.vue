@@ -13,16 +13,16 @@
         <div class="mt-4 space-y-2 text-sm">
           <p>
             <span class="font-semibold text-slate-600">Email:</span>
-            <a href="mailto:you@example.com" class="ml-2">you@example.com</a>
+            <a href="mailto:radihjrprgs@example.com" class="ml-2">radihjrprgs@example.com</a>
           </p>
           <p>
             <span class="font-semibold text-slate-600">GitHub:</span>
-            <a href="https://github.com/your-handle" target="_blank" rel="noreferrer" class="ml-2">@your-handle</a>
+            <a href="https://github.com/bsnman" target="_blank" rel="noreferrer" class="ml-2">@bsnman</a>
           </p>
           <p>
             <span class="font-semibold text-slate-600">LinkedIn:</span>
-            <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noreferrer" class="ml-2">
-              /in/your-handle
+            <a href="https://www.linkedin.com/in/radih-jr-paraguas-b1a468154/" target="_blank" rel="noreferrer" class="ml-2">
+              /in/radih-jr-paraguas-b1a468154
             </a>
           </p>
         </div>

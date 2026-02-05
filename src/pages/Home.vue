@@ -30,7 +30,7 @@ const techStack = [
     <section class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
       <div>
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Portfolio</p>
-        <h1 class="mt-4">Radih J. Paraguas</h1>
+        <h1 class="mt-4">Radih Jr Paraguas</h1>
         <p class="mt-4 text-lg text-slate-600">
           Full-stack software engineer building AI-powered platforms and scalable backend systems.
         </p>
