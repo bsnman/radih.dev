@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { routeImports, type RoutePath } from '../router'
+import PrefetchLink from './PrefetchLink.vue'
+import type { RoutePath } from '../router'
 
 const route = useRoute()
 const isOpen = ref(false)
@@ -24,35 +25,25 @@ const closeMenu = () => {
   isOpen.value = false
 }
 
-const prefetched = new Set<RoutePath>()
-const prefetchRoute = (to: RoutePath) => {
-  if (to === route.path) return
-  const loader = routeImports[to]
-  if (!loader || prefetched.has(to)) return
-  prefetched.add(to)
-  void loader()
-}
 </script>
 
 <template>
   <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
     <div class="container flex items-center justify-between py-4">
-      <RouterLink to="/" class="text-lg font-semibold text-ink">
+      <PrefetchLink to="/" class="text-lg font-semibold text-ink">
         radih.dev
-      </RouterLink>
+      </PrefetchLink>
 
       <nav class="hidden items-center gap-6 md:flex">
-        <RouterLink
+        <PrefetchLink
           v-for="link in links"
           :key="link.to"
           :to="link.to"
           class="text-sm font-medium text-slate-600 transition hover:text-ink"
           :class="isActive(link.to) ? 'text-ink' : ''"
-          @mouseenter="prefetchRoute(link.to)"
-          @focus="prefetchRoute(link.to)"
         >
           {{ link.label }}
-        </RouterLink>
+        </PrefetchLink>
       </nav>
 
       <button
@@ -76,18 +67,16 @@ const prefetchRoute = (to: RoutePath) => {
 
     <div v-if="isOpen" class="border-t border-slate-200 bg-white md:hidden">
       <div class="container flex flex-col gap-2 py-4">
-        <RouterLink
+        <PrefetchLink
           v-for="link in links"
           :key="link.to"
           :to="link.to"
           class="rounded-md px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-ink"
           :class="isActive(link.to) ? 'bg-slate-100 text-ink' : ''"
           @click="closeMenu"
-          @mouseenter="prefetchRoute(link.to)"
-          @focus="prefetchRoute(link.to)"
         >
           {{ link.label }}
-        </RouterLink>
+        </PrefetchLink>
       </div>
     </div>
   </header>

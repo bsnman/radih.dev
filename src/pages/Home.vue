@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import projectsData from '../content/projects.json'
 import type { Project } from '../types/project'
 import ProjectCard from '../components/ProjectCard.vue'
+import PrefetchLink from '../components/PrefetchLink.vue'
 
 const resumeUrl = new URL('../assets/resume/resume.pdf', import.meta.url).href
 
@@ -39,7 +40,7 @@ const techStack = [
           Full-stack software engineer building AI-powered platforms and scalable backend systems.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <RouterLink class="button-primary" to="/projects">View Projects</RouterLink>
+          <PrefetchLink class="button-primary" to="/projects">View Projects</PrefetchLink>
           <a class="button" :href="resumeUrl" download>Download Resume</a>
         </div>
       </div>
@@ -68,7 +69,7 @@ const techStack = [
     <section class="section">
       <div class="flex items-center justify-between">
         <h2>Featured Projects</h2>
-        <RouterLink class="text-sm font-medium" to="/projects">See all</RouterLink>
+        <PrefetchLink class="text-sm font-medium" to="/projects">See all</PrefetchLink>
       </div>
       <div class="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <ProjectCard v-for="project in featuredProjects" :key="project.id" :project="project" />
