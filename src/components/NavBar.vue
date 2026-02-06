@@ -1,21 +1,36 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { routeImports, type RoutePath } from '../router'
 
 const route = useRoute()
 const isOpen = ref(false)
 
-const links = [
+type NavLink = {
+  label: string
+  to: RoutePath
+}
+
+const links: NavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'Projects', to: '/projects' },
   { label: 'Experience', to: '/experience' },
   { label: 'Resume', to: '/resume' },
   { label: 'Contact', to: '/contact' },
-]
+] 
 
-const isActive = (to: string) => route.path === to
+const isActive = (to: RoutePath) => route.path === to
 const closeMenu = () => {
   isOpen.value = false
+}
+
+const prefetched = new Set<RoutePath>()
+const prefetchRoute = (to: RoutePath) => {
+  if (to === route.path) return
+  const loader = routeImports[to]
+  if (!loader || prefetched.has(to)) return
+  prefetched.add(to)
+  void loader()
 }
 </script>
 
@@ -33,6 +48,8 @@ const closeMenu = () => {
           :to="link.to"
           class="text-sm font-medium text-slate-600 transition hover:text-ink"
           :class="isActive(link.to) ? 'text-ink' : ''"
+          @mouseenter="prefetchRoute(link.to)"
+          @focus="prefetchRoute(link.to)"
         >
           {{ link.label }}
         </RouterLink>
@@ -66,6 +83,8 @@ const closeMenu = () => {
           class="rounded-md px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-ink"
           :class="isActive(link.to) ? 'bg-slate-100 text-ink' : ''"
           @click="closeMenu"
+          @mouseenter="prefetchRoute(link.to)"
+          @focus="prefetchRoute(link.to)"
         >
           {{ link.label }}
         </RouterLink>
