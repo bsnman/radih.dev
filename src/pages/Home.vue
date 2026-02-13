@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import projectsData from '../content/projects.json'
 import type { Project } from '../types/project'
 import ProjectCard from '../components/ProjectCard.vue'
@@ -27,6 +27,21 @@ const techStack = [
   'AWS',
   'LangChain',
 ]
+
+const credlyScriptId = 'credly-embed-script'
+const credlyBadgeId = '721b696e-6fac-43ec-81fd-c2928a015f42'
+const credlyHost = 'https://www.credly.com'
+
+onMounted(() => {
+  if (typeof document === 'undefined') return
+  if (document.getElementById(credlyScriptId)) return
+
+  const script = document.createElement('script')
+  script.id = credlyScriptId
+  script.async = true
+  script.src = 'https://cdn.credly.com/assets/utilities/embed.js'
+  document.body.appendChild(script)
+})
 
 </script>
 
@@ -73,6 +88,18 @@ const techStack = [
       </div>
       <div class="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <ProjectCard v-for="project in featuredProjects" :key="project.id" :project="project" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <div class="mt-4 flex">
+        <div
+          data-iframe-width="150"
+          data-iframe-height="270"
+          :data-share-badge-id="credlyBadgeId"
+          :data-share-badge-host="credlyHost"
+        ></div>
       </div>
     </section>
   </div>
