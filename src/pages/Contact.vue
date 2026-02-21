@@ -178,7 +178,7 @@ onUnmounted(() => {
         <div class="mt-4 space-y-2 text-sm">
           <p>
             <span class="font-semibold text-slate-600">Email:</span>
-            <a href="mailto:radihjrprgs@example.com" class="ml-2">radihjrprgs@example.com</a>
+            <a href="mailto:radihjrprgs@gmail.com" class="ml-2">radihjrprgs@gmail.com.com</a>
           </p>
           <p>
             <span class="font-semibold text-slate-600">GitHub:</span>
